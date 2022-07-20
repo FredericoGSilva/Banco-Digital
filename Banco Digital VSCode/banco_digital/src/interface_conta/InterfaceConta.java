@@ -9,4 +9,8 @@ public interface InterfaceConta {
     void depositar(double valorDoDeposito);
 
     void transferir(double valorDaTransferencia, Conta destinoDaTransferencia);
+
+    void verificarSaldo();
+
+    void imprimirExtrato();
 }
