@@ -1,12 +1,13 @@
 package src;
 
+import src.banco.Banco;
 import src.cliente.Cliente;
 import src.contas.Conta;
 import src.contas.ContaCorrente;
 import src.contas.ContaPoupanca;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) {   
 
         Cliente frederico = new Cliente();
         frederico.setNome("Frederico G. Silva");
@@ -30,5 +31,10 @@ public class App {
 
         contaDoFrederico.imprimirExtrato();
 
+
+        Banco.listaDeClientes(contaDoFrederico);
+        Banco.listaDeClientes(contaDaMiriam);
+    
+        Banco.imprimirLista();
     }
 }

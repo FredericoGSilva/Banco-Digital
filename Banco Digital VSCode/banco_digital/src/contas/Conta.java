@@ -13,11 +13,9 @@ public abstract class Conta implements InterfaceConta {
     private static int SEQUENCIAL = 1; // constante 
     private Cliente cliente; //tipo é refência p/ outra classe
 
-    // Referenciar o cliente poderia ser passado pelo método set mas irei fazer no construtor de Conta
-
-/*    public void setCliente(Cliente cliente) { 
-        this.cliente = cliente;
-    }*/ 
+    public Cliente getCliente() {
+        return cliente;
+    }
 
     public Conta(Cliente cliente) {
         this.agencia = AGENCIA_PADRAO;
@@ -52,7 +50,7 @@ public abstract class Conta implements InterfaceConta {
     }
 
     protected void imprimirInformacoesConta() {
-        System.out.println("Nome: " + cliente.getNome() 
+        System.out.println(String.format("Títular: %s", cliente.getNome()) 
                             + String.format("\nAgencia: %d", agencia) 
                             + "\nNúmero da Conta: " + quantidadeDeContas
                             + String.format("\nSaldo: %.2f", saldo));

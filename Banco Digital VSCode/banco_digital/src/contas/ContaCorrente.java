@@ -15,7 +15,7 @@ public class ContaCorrente extends Conta {
 
     @Override
     public void imprimirExtrato() {
-        System.out.println("\nExtrato Conta Corrente ===");
+        System.out.println("\n=== Extrato Conta Corrente ===");
         imprimirInformacoesConta();
     }
 
